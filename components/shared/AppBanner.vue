@@ -58,7 +58,7 @@ export default {
           text-gray-400
         "
       >
-        A Self-Taught Nuxt & VueJS Learner
+        A Self-Taught Nuxt & VueJS
       </p>
       <p
         class="
