@@ -1,6 +1,10 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
+  ssr: "false",
+  generate: {
+    fallback: true
+  },
   colorMode: {
     classSuffix: "",
   },
