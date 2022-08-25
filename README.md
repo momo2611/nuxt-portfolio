@@ -2,7 +2,7 @@
 
 ## Demo URL
 
-[https://momo-folio.vercel.app](https://momo-folio.vercel.app))
+[https://momo-folio.vercel.app](https://momo-folio.vercel.app)
 
 ## Features
 
