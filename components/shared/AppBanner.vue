@@ -18,20 +18,17 @@ export default {
 </script>
 
 <template>
-  <section
-    class="
+  <section class="
       flex flex-col
       sm:justify-between
       items-center
       sm:flex-row
       mt-10
       sm:mt-8
-    "
-  >
+    ">
     <!-- Banner left contents -->
     <div class="w-full md:w-1/3 text-left">
-      <h1
-        class="
+      <h1 class="
           font-general-semibold
           text-3xl
           md:text-3xl
@@ -41,12 +38,10 @@ export default {
           text-ternary-dark
           dark:text-primary-light
           uppercase
-        "
-      >
+        ">
         Hi, I'm Mo Mo
       </h1>
-      <p
-        class="
+      <p class="
           font-general-medium
           mt-2
           text-lg
@@ -56,12 +51,10 @@ export default {
           sm:text-left
           leading-none
           text-gray-400
-        "
-      >
-        A Self-Taught Nuxt & VueJS Learner
+        ">
+        A Self-Taught Nuxt & VueJS
       </p>
-      <p
-        class="
+      <p class="
           font-general-medium
           mt-2
           text-lg
@@ -71,33 +64,37 @@ export default {
           sm:text-left
           leading-none
           text-gray-400
-        "
-      >
+        ">
         And I love music.
       </p>
+      <p class="
+          font-general-medium
+          mt-2
+          text-lg
+          sm:text-xl
+          xl:text-2xl
+          text-center
+          sm:text-left
+          leading-none
+          text-gray-400
+        ">
+        Also 🐱 and 🐶.
+      </p>
       <div class="mt-6">
-        <iframe
-          style="border-radius: 8px"
+        <iframe style="border-radius: 8px"
           src="https://open.spotify.com/embed/track/0U8QSYMw4xJTNM8IaP6PnD?utm_source=generator"
-          class="hidden md:block md:w-full"
-          height="80"
-          frameBorder="0"
-          allowfullscreen=""
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        ></iframe>
+          class="hidden md:block md:w-full" height="80" frameBorder="0" allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"></iframe>
       </div>
     </div>
 
     <!-- Banner right illustration -->
     <div class="w-full md:w-2/3 text-right float-right">
-      <img
-        v-if="this.$colorMode.value == 'dark'"
-        src="~/static/developer-dark.svg"
-        alt="Developer Dark"
-      />
+      <img v-if="this.$colorMode.value == 'dark'" src="~/static/developer-dark.svg" alt="Developer Dark" />
       <img v-else src="~/static/developer.svg" alt="Developer Light" />
     </div>
   </section>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+</style>

@@ -51,7 +51,7 @@
       <!-- Project info -->
       <div class="block sm:flex gap-0 sm:gap-10 mt-14">
         <!-- Single project left section details -->
-        <div class="w-full sm:w-1/3 text-left">
+        <div class="w-full sm:w-1/3 text-left overflow-hidden">
           <!-- Single project client details -->
           <div class="mb-7">
             <p class="
@@ -135,15 +135,17 @@
                 ">
                 <div>
                   <span>Demo: </span>
-                  <a :href="link.demo || '#'" class="hover:underline cursor-pointer text-blue-600" target="_blank">{{
-                      link.demo || "Unavailable"
-                  }}</a>
+                  <a :href="link.demo || '#'" class="w-full hover:underline cursor-pointer text-blue-600"
+                    target="_blank">{{
+                        link.demo || "Unavailable"
+                    }}</a>
                 </div>
                 <div>
                   <span>Source code: </span>
-                  <a :href="link.source || '#'" class="hover:underline cursor-pointer text-blue-600" target="_blank">{{
-                      link.source || "Unavailable"
-                  }}</a>
+                  <a :href="link.source || '#'" class="w-full hover:underline cursor-pointer text-blue-600"
+                    target="_blank">{{
+                        link.source || "Unavailable"
+                    }}</a>
                 </div>
               </li>
             </ul>
@@ -151,7 +153,19 @@
         </div>
 
         <!-- cat image -->
-        <CatGrid />
+        <div class="w-full sm:w-2/3 text-left mt-10 sm:mt-0">
+          <p class="
+              font-general-medium
+              text-primary-dark
+              dark:text-primary-light
+              text-2xl
+              font-bold
+              mb-7
+            ">
+            I don't have idea for this section, so 😁
+          </p>
+          <ImageGrid :images="cats" :value="value" />
+        </div>
       </div>
     </div>
 
@@ -163,16 +177,34 @@
 </template>
 
 <script>
+import axios from "axios";
 import { mapState } from "vuex";
 import feather from "feather-icons";
-import CatGrid from "../../components/projects/CatGrid.vue";
+import ImageGrid from "../../components/projects/ImageGrid.vue";
 export default {
   scrollToTop: true,
+
+  data: () => {
+    return {
+      cats: [],
+      value: 2
+    };
+  },
   computed: {
     project() {
       return this.$store.getters.getProjectById(this.$route.params.id);
     },
     ...mapState(["socialSharings"]),
+  },
+
+  async fetch() {
+    await axios
+      .get(
+        `https://api.thecatapi.com/v1/images/search?format=json&limit=12&api_key=${process.env.CAT_API_KEY}`
+      )
+      .then((data) => {
+        this.cats = data.data;
+      });
   },
   mounted() {
     feather.replace();
@@ -180,7 +212,7 @@ export default {
   updated() {
     feather.replace();
   },
-  components: { CatGrid }
+  components: { ImageGrid }
 };
 </script>
 
