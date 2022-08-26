@@ -9,6 +9,25 @@
 
 
 /*!
+  * vue-router v3.5.4
+  * (c) 2022 Evan You
+  * @license MIT
+  */
+
+/*!
+ * Vue.js v2.7.8
+ * (c) 2014-2022 Evan You
+ * Released under the MIT License.
+ */
+
+/*!
+ * vuex v3.6.2
+ * (c) 2021 Evan You
+ * @license MIT
+ */
+
+
+/*!
   Copyright (c) 2016 Jed Watson.
   Licensed under the MIT License (MIT), see
   http://jedwatson.github.io/classnames
@@ -517,22 +536,3 @@
 /*!*******************************************************************************!*\
   !*** ./node_modules/core-js/internals/validate-set-prototype-of-arguments.js ***!
   \*******************************************************************************/
-
-
-/*!
-  * vue-router v3.5.4
-  * (c) 2022 Evan You
-  * @license MIT
-  */
-
-/*!
- * Vue.js v2.7.8
- * (c) 2014-2022 Evan You
- * Released under the MIT License.
- */
-
-/*!
- * vuex v3.6.2
- * (c) 2021 Evan You
- * @license MIT
- */
