@@ -42,9 +42,11 @@
       </div>
 
       <!-- Project gallery -->
-      <div class="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 mt-12">
-        <div class="mb-10 sm:mb-0" v-for="projectImage in project.projectImages" :key="projectImage.id">
-          <img :src="projectImage.img" class="rounded-xl cursor-pointer shadow-lg sm:shadow-none" />
+      <div class="grid grid-cols-1 sm:grid-cols-3 sm:gap-8 mt-12">
+        <div class="mb-10 sm:mb-0 relative overflow-hidden rounded-md" v-for="projectImage in project.projectImages"
+          :key="projectImage.id">
+          <img :src="projectImage.img"
+            class="shadow-lg sm:shadow-none hover:scale-110 transition duration-300 ease-in-out" />
         </div>
       </div>
 

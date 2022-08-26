@@ -1,19 +1,14 @@
 <template>
     <div class="w-full h-auto grid grid-cols-three gap-3 grid-flow-dense">
-        <div v-for="image in images" :key="image.id" class="w-auto h-auto img-animal">
-            <img class="
-                  w-full
-                  h-full
-                  rounded-md
-                  shadow-lg
-                  object-cover
-                " :src="value == 1 ? image : image.url" alt="Image" />
+        <div v-for="image in images" :key="image.id"
+            class="relative overflow-hidden bg-no-repeat hover:shadow-md bg-cover rounded-md w-auto h-auto img-animal">
+            <img class="w-full h-full object-cover hover:scale-110 transition duration-300 ease-in-out"
+                :src="value == 1 ? image : image.url" alt="Image" />
         </div>
     </div>
 </template>
 
 <script>
-
 export default {
     props: {
         images: {
@@ -22,11 +17,10 @@ export default {
         },
         value: {
             type: Number,
-            required: true
-        }
+            required: true,
+        },
     },
-
-}
+};
 </script>
 
 <style lang="scss" scoped>

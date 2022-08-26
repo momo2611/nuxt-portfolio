@@ -19,8 +19,7 @@ export default {
   <div>
     <AboutMe class="container mx-auto" />
 
-    <div
-      class="
+    <div class="
         flex flex-wrap
         mx-5
         sm:mx-0
@@ -29,24 +28,19 @@ export default {
         flex-row
         justify-center
         items-center
-        mt-8
-      "
-    >
+        mt-12
+      ">
       <div>
         <img
-          src="https://github-readme-stats.vercel.app/api/top-langs/?username=momo2611&langs_count=8&layout=compact&theme=dracula"
-        />
+          src="https://github-readme-stats.vercel.app/api/top-langs/?username=momo2611&langs_count=8&layout=compact&theme=dracula" />
       </div>
       <div>
-        <img
-          src="https://github-readme-stats.vercel.app/api?username=momo2611&show_icons=true&theme=dracula"
-        />
+        <img src="https://github-readme-stats.vercel.app/api?username=momo2611&show_icons=true&theme=dracula" />
       </div>
     </div>
 
     <div class="text-center">
-      <p
-        class="
+      <p class="
           font-general-semibold
           text-2xl
           sm:text-5xl
@@ -56,8 +50,7 @@ export default {
           sm:mt-16
           text-ternary-dark
           dark:text-ternary-light
-        "
-      >
+        ">
         Timeline
       </p>
     </div>
@@ -66,4 +59,5 @@ export default {
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+</style>
