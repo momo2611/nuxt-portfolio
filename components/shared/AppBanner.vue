@@ -28,7 +28,7 @@ export default {
     ">
     <!-- Banner left contents -->
     <div class="w-full md:w-1/3 text-left">
-      <h1 class="
+      <!-- <h1 class="
           font-general-semibold
           text-3xl
           md:text-3xl
@@ -38,6 +38,20 @@ export default {
           text-ternary-dark
           dark:text-primary-light
           uppercase
+        ">
+        Hi, I'm Mo Mo
+      </h1> -->
+      <h1 class="
+                font-general-semibold
+          text-3xl
+          md:text-3xl
+          xl:text-4xl
+          text-center
+          sm:text-left
+          text-ternary-dark
+          dark:text-primary-light
+          uppercase
+hello-text
         ">
         Hi, I'm Mo Mo
       </h1>
@@ -97,4 +111,14 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.hello-text {
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: text-shadow 1s;
+
+  &:hover {
+    text-shadow: 0.04em 0.04em #fc0049, 0.08em 0.08em #fe8f01,
+      0.12em 0.12em #fdf21f, 0.16em 0.16em #3fdf4b, 0.2em 0.2em #3462fe;
+  }
+}
 </style>
